@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'ShareTech', sans-serif;
+    font-size: 24px;
+    color: #344648;
+    background-color: #FFBB98;
+
+    box-sizing: border-box; /*include padding and margin in the box model*/
+}
+
+#container{
+    padding: 20px 40px 20px 40px;
+    min-width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "heading heading"
+    "editor markdown";
+    
+}
+
+#heading{
+    grid-area: heading
+}
+
+#editor{
+    grid-area: editor;
+    border: solid black 1px;
+}
+
+#markdown{
+    grid-area: markdown;
+    border: solid black 1px;
+}
