@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'ShareTech', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     color: #344648;
     background-color: #FFBB98;
 
@@ -16,7 +16,7 @@
 
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
     "heading heading"
@@ -31,9 +31,17 @@
 #editor{
     grid-area: editor;
     border: solid black 1px;
+    padding: 16px;
+    resize: horizontal;
+
+    min-width: 20vw;
+    max-width: 70vw;
+    
 }
 
 #markdown{
     grid-area: markdown;
     border: solid black 1px;
+    padding: 16px;
+
 }
