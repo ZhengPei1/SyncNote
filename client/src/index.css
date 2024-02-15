@@ -1,23 +1,24 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'ShareTech', sans-serif;
-    font-size: 18px;
-    color: #344648;
-    background-color: #FFBB98;
-
     box-sizing: border-box; /*include padding and margin in the box model*/
+}
+
+:root{
+    --color-scheme: #2e2e2e
 }
 
 #container{
     padding: 20px 40px 20px 40px;
     min-width: 100%;
     min-height: 100vh;
+    background-color: var(--color-scheme);
+    
 
     display: grid;
     grid-gap: 20px;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: calc(20vh - 80px) 80vh;
     grid-template-areas: 
     "heading heading"
     "editor markdown";
@@ -25,23 +26,31 @@
 }
 
 #heading{
-    grid-area: heading
+    grid-area: heading;
+    border: solid black 1px;
 }
 
 #editor{
     grid-area: editor;
-    border: solid black 1px;
-    padding: 16px;
+    border: solid black 3px;
+    padding: 20px;
     resize: horizontal;
+    background-color: var(--color-scheme) !important;
 
     min-width: 20vw;
     max-width: 70vw;
     
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
 #markdown{
     grid-area: markdown;
-    border: solid black 1px;
-    padding: 16px;
+    border: solid black 3px;
+    padding: 20px;
+    background-color: var(--color-scheme);
+    overflow-y: auto;
+    overflow-x: hidden;
 
+    font-size: 24px;
 }

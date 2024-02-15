@@ -1,7 +1,4 @@
-import axios from 'axios';
-import showdown from "showdown";
-
-const converter = new showdown.Converter();
+import {marked} from "marked";
 
 function Editor(props){
     return(
@@ -15,8 +12,8 @@ function Editor(props){
 }
 
 function handleKeyUp(e, setMarkdown){
-    html = converter.makeHtml(e.target.value);
-    console.log("www" + html);
+    const html = marked.parse(e.target.value);
+    console.log(html);
     setMarkdown(html);
 }
 
