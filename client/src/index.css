@@ -5,20 +5,18 @@
 }
 
 :root{
-    --color-scheme: #2e2e2e
+    --color-scheme: #212121
 }
 
 #container{
-    padding: 20px 40px 20px 40px;
     min-width: 100%;
     min-height: 100vh;
     background-color: var(--color-scheme);
     
 
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: calc(20vh - 80px) 80vh;
+    grid-template-columns: 40vw 1fr;
+    grid-template-rows: 10vh 85vh;
     grid-template-areas: 
     "heading heading"
     "editor markdown";
@@ -28,14 +26,18 @@
 #heading{
     grid-area: heading;
     border: solid black 1px;
+    border-radius: 0px 0px 2em 2em;
 }
 
 #editor{
     grid-area: editor;
     border: solid black 3px;
+    margin: 10px;
     padding: 20px;
-    resize: horizontal;
-    background-color: var(--color-scheme) !important;
+    resize: none;
+    white-space: nowrap;
+    background-color: var(--color-scheme);
+    color: white;
 
     min-width: 20vw;
     max-width: 70vw;
@@ -47,10 +49,11 @@
 #markdown{
     grid-area: markdown;
     border: solid black 3px;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
+    margin: 10px;
     background-color: var(--color-scheme);
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: auto;
+    color: white;
 
     font-size: 24px;
 }
